@@ -1,0 +1,554 @@
+:root{
+    --main-color:#ff9800;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+/**************************************************/
+/**********************start settings box*****************************/
+.settings{
+    position: fixed;
+    top: 0;
+    left: -200px;
+    z-index: 1000;
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+    transition: .3s;
+}
+.open{
+    left: 0;
+}
+.setting-icon{
+    position: absolute;
+    top: 150px;
+    right: -30px;
+    padding: 8px 0;
+    width: 30px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+.fa-cog{
+    padding: 8px 0;
+    width: 30px;
+}
+.settings-container .option-list{
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    margin: 10px;
+}
+.settings-container .option-list h4{
+    margin: 0;
+    color: #666;
+}
+.settings-container .option-list .color-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+.settings-container .color-list li{
+    width: 20px;
+    height: 20px;
+    opacity: .5;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+.settings-container .color-list .active{
+    opacity: 1;
+}
+.settings-container .color-list li:first-child{
+    background-color: #ff9800;
+}
+.settings-container .color-list li:nth-child(2){
+    background-color: red;
+}
+.settings-container .color-list li:nth-child(3){
+    background-color: cadetblue;
+}
+.settings-container .color-list li:nth-child(4){
+    background-color: darkgreen;
+}
+.settings-container .option-list h4{
+    font-size: 14px;
+}
+.settings-container .randomBackgrounds .yes,
+.settings-container .randomBackgrounds .no{
+    width: 50px;
+    background-color: #333;
+    color: #fff;
+    padding: 2px;
+    margin-top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+}
+.settings-container .option-list .randomBackgrounds .active{
+    opacity: 1;
+}
+.settings-container .option-list .yes{background-color: green}
+.settings-container .option-list .no{background-color: red}
+/************************end settings box**************************/
+
+/**********************start main header*****************************/
+.main{
+    min-height: 100vh;
+    background-image: url(imgs/01.jpg);
+    background-size: cover;
+    position: relative;
+    transition: all 3s;
+}
+.overLay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
+}
+header{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    padding: 10px;
+}
+header .logo{
+    width: 300px;
+    padding: 15px;
+}
+.logo h1{
+     display: inline;
+}
+.links{
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 18px;
+}
+.links li{
+    display: inline-block;
+    margin-left: 10px;
+    list-style: none;
+}
+.links li a{
+    text-decoration: none;
+    color: #fff;
+}
+.links li a:hover,
+.links li a.active{
+    color: var(--main-color);
+    transition: .3s;
+}
+.main .intro-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  
+}
+.main .intro-text h2{
+    font-size: 42px;
+    margin: 0 0 12px;
+}
+.main .intro-text span{
+    color: var(--main-color);
+}
+.main .intro-text p{
+    line-height: 1.6;
+    font-size: 20px;
+    
+}
+/**********************end main header****************************/
+
+/*********************start aboutUs******************************/
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.about-us{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+}
+.about1{
+    flex: 1;
+}
+.about1 h2{
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--main-color);
+}
+.about1 p{
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+.about2{
+    flex: 1;
+    text-align: center;
+}
+.about2 img{
+  width: 500px;
+    height: 400px;
+}
+/***********************end aboutUs***************************/
+
+/**********************start skills*****************************/
+.skills{
+    background-color: #eee;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.skills h2{
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--main-color); 
+    text-align: center;
+    padding-top: 40px;
+}
+.skills .skill-box{
+    background-color: #fff;
+    display: flex;
+    padding: 15px;
+    margin: 15px;
+}
+.skills .skill-box .skill-name{
+    font-weight: bold;
+    width: 150px;
+    line-height: 30px;
+    text-align: center;
+}
+.skills .skill-box .skill-progress{
+    height: 30px;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.skills .skill-box .skill-progress span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all .5s;
+}
+
+/**********************end skills*****************************/
+
+/************************start gallery*******************************/
+.gallery{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.gallery h2{
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 50px;
+    text-align: center;
+    color: var(--main-color);
+}
+.gallery .imgBox{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+    left: 5%;
+}
+.gallery .imgBox img{
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f6f6f6;
+    object-fit: cover;
+}
+
+.overImg{
+    position: fixed;
+    background-color:rgba(0,0,0,.6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000; 
+}
+.imgBx{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2001;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;  
+}
+.imgBx img{
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
+}
+.imgBx h3{
+    text-align: center;
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0 0 20px;
+}
+.overImg span{
+    text-align: center;
+    position: fixed;
+    z-index: 2002;
+    right: 10%;
+    top: 10%;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: gray;
+    opacity: 1;
+    border-radius: 50%;
+}
+.overImg span:hover{
+    opacity: .7;
+}
+/************************end gallery*******************************/
+/************************start timeline*******************************/
+.timeLine{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+}
+.timeLine_content{
+    position: relative;
+    overflow: hidden;
+}
+.timeLine .timeLine_content:before {
+    content: ' ';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: var(--main-color);
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+}
+.timeLine_content .year{
+    margin: 20px auto;
+    width: 50px;
+    background-color: var(--main-color);
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    padding: 2px 5px;
+    font-weight: bold;
+}
+.timeLine .timeLine_content .left,
+.timeLine .timeLine_content .right{
+    width: calc(50% - 25px);
+    margin-bottom: 40px;
+    position: relative;
+}
+.timeLine .timeLine_content .left{
+    float: left;
+}
+.timeLine .timeLine_content .left:before{
+    right: -35px;
+}
+.timeLine .timeLine_content .right{
+    float: right;
+}
+
+.timeLine .timeLine_content .right:before{
+    left: -35px;
+}
+
+.timeLine .timeLine_content .left:before,
+.timeLine .timeLine_content .right:before{
+    content: " ";
+    background-color: #fff;
+    width: 14px;
+    height: 14px;
+    border: 3px solid var(--main-color);
+    position: absolute;
+    border-radius: 50%;
+    top: 20px;
+}
+.timeLine .timeLine_content .content{
+    padding: 20px;
+    background-color: #fff;
+}
+.timeLine .timeLine_content .content h3{
+  font-weight: bold;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+.timeLine .timeLine_content .content p{
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+.clearfix{
+    clear: both;
+}
+.timeLine .timeLine_content .left .content::before{
+    content: " ";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent #fff;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+}
+.timeLine .timeLine_content .right .content::before{
+    content: " ";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #fff transparent transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+}
+/************************end timeline*******************************/
+/************************start features*******************************/
+.features{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.features h2{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 60px;
+    text-align: center;
+}
+.features .feat-box{
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.features .feat-box img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+.features .feat-box h4{
+    font-size: 22px;
+    margin: 15px 0 40px;
+    position: relative;
+}
+.features .feat-box h4:before{
+    content: " ";
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 4px;
+    background-color: var(--main-color);
+    
+}
+.features .feat-box p{
+    line-height: 1.7;
+    width: 80%;
+    margin: 0 auto;
+    color: #706f6f;
+}
+/************************end features*******************************/
+/************************start testimonials*******************************/
+.testimonials{
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.testimonials::before{
+    content: " ";
+    background-color: var(--main-color);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.testimonials::after{
+    content: " ";
+    background-color: #333;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.testimonials h2{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 30px;
+}
+.testimonials .test-box{
+    position: relative;
+    z-index: 2;
+    width: calc(98% / 3);
+    float: left;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 22px;
+}
+.testimonials .test-box:not(:last-of-type){
+    margin-right: 1%;
+}
+.testimonials .test-box p{
+    margin: 0 0 20px;
+    line-height: 1.5;
+    color: #707070;
+    font-size: 16px;
+    font-style: italic;
+}
+.testimonials .person_info{
+    overflow: hidden;
+}
+.testimonials .person_info img{
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.testimonials .person_info h4{
+    margin: 14px 0 10px;
+}
+.testimonials .person_info p{
+    color: #707070;
+    margin: 0;
+    
+}
